@@ -17,3 +17,12 @@ model User {
   updatedAt DateTime @updatedAt
   username  String   @unique
 }
+
+model Laptop {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  name      String?
+  price     Float?
+  rating    Int?
+  updatedAt DateTime @updatedAt
+}
